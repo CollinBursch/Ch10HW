@@ -22,7 +22,7 @@ def main():
             print('Procedure:', procedure.get_name())
             print('Date:', procedure.get_date())
             print('Pactitioner:', procedure.get_practitioner())
-            print('Charge: $', procedure.get_charges(), sep='')
+            print('Charge: ${:,.2f}'.format(procedure.get_charges()), sep='')
             print()
             if patient.get_veteran_status() == True:
                 total_charge += procedure.get_charges() * .60
@@ -30,6 +30,6 @@ def main():
                 total_charge += procedure.get_charges()
                 
 
-    print('Total Charges: $', total_charge, sep='')
+    print('Total Charges: ${:,.2f}'.format(total_charge), sep='')
 
 main()
